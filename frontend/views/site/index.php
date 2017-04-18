@@ -8,6 +8,10 @@ $this->title = 'My Yii Application';
 
     <div class="jumbotron">
         <h1>Congratulations!</h1>
+        <h2> Header: <?php \Yii::$app->myComponent->welcome() ?></h2>
+        <?php Yii::$app->myComponent->label1 = 'My Label1'; ?>
+        <?php echo "Label1 : " .Yii::$app->myComponent->label1; ?>
+        <?php Yii::$app->myComponent->trigger(\common\components\MyComponent::EVENT_AFTER_SOMETHING); ?>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 

@@ -12,6 +12,12 @@ return [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
+        //mendaftarkan myComponent pada main.php (frontend)
+        'myComponent' => [
+            'class' => 'common\components\MyComponent',
+            'on after-something' => ['common\components\MyComponent', 'myHandler'],
+        ],
+
         'request' => [
             'csrfParam' => '_csrf-frontend',
         ],
