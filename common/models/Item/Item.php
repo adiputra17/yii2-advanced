@@ -5,6 +5,7 @@ namespace common\models\Item;
 use Yii;
 use common\models\ItemCategory\ItemCategory;
 use yii\db\ActiveRecord;
+use yii\db\Expression;
 use yii\behaviors\SluggableBehavior;
 use yii\behaviors\BlameableBehavior;
 

@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="item-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php Yii::$app->myComponent->trigger(\common\components\MyComponent::EVENT_AFTER_SOMETHING); ?>
+    <!-- <?php //Yii::$app->myComponent->trigger(\common\components\MyComponent::EVENT_AFTER_SOMETHING); ?> -->
 
     <p>
         <?= Html::a('Create Item', ['create'], ['class' => 'btn btn-success']) ?>
@@ -32,8 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'price',
             'category_id',
-            'created_at',
-            'updated_at',
+            'created_at:datetime',
+            'updated_at:datetime',
             'created_by',
             'updated_by',
 

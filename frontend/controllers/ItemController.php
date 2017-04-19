@@ -45,14 +45,7 @@ class ItemController extends Controller
         ]);
     }
 
-    /**
-     * Displays a single Item model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        // $statistic = new Statistic;
+            // $statistic = new Statistic;
         // $statistic->access_time = date("Y-m-d H:i:s");
         // $statistic->user_ip = Yii::$app->getRequest()->getUserIP();
         // $statistic->user_host = Yii::$app->getRequest()->getUserHost();
@@ -60,6 +53,13 @@ class ItemController extends Controller
         // $statistic->query_string = Yii::$app->getRequest()->getQueryString();
         // $statistic->save();
 
+    /**
+     * Displays a single Item model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
         Yii::$app->myComponent->trigger(\common\components\MyComponent::EVENT_AFTER_SOMETHING);
         return $this->render('view', [
             'model' => $this->findModel($id),
